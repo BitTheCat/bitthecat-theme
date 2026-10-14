@@ -1,0 +1,7 @@
+id = "bitthecat-theme"
+name = "bitthecat"
+version = "0.1.0"
+schema_version = 1
+authors = ["BitTheCat"]
+description = "A dark and light theme for Zed with a night-blue palette and warm orange accents."
+repository = "https://github.com/bitthecat/bitthecat-theme"
