@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Sublime Text / Package Control
+package-metadata.json
+*.sublime-package
+__pycache__/
+*.pyc
+
+# Zed
+.zed/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Logs / temp
+*.log
