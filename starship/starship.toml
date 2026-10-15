@@ -12,7 +12,7 @@ add_newline = true
 # Each "\U0000f460" (>) takes the color of the segment it introduces. 
 # 
 format = """
-$time[ · ](fg:muted)$username[ \U000F0DBB ](fg:accent2)$directory([\U0000f460 ](fg:green)$git_branch$git_status)
+$time[ · ](fg:muted)$username[ 󰶻 ](fg:accent2)$directory([ ](fg:green)$git_branch$git_status)
 $character"""
 
 # --- Palettes ---------------------------------------------------------------
@@ -64,18 +64,18 @@ format = '[$symbol$branch]($style)'
 style = 'fg:green'
 
 [git_status]
-format = ' [$all_status$ahead_behind]($style)'
+format = '[$all_status$ahead_behind]($style)'
 style = 'fg:muted'
-conflicted = '[](fg:red)'
-ahead = '[](fg:cyan)'
-behind = '[](fg:cyan)'
-diverged = '[](fg:cyan)'
-untracked = '[](fg:purple)'
-stashed = '[](fg:purple)'
-modified = '[](fg:accent2)'
-staged = '[](fg:green)'
-renamed = '[](fg:blue)'
-deleted = '[](fg:red)'
+conflicted = '[ ](fg:red)'
+ahead = '[ ](fg:cyan)'
+behind = '[ ](fg:cyan)'
+diverged = '[ ](fg:cyan)'
+untracked = '[ ](fg:purple)'
+stashed = '[ ](fg:purple)'
+modified = '[ ](fg:accent2)'
+staged = '[ ](fg:green)'
+renamed = '[ ](fg:blue)'
+deleted = '[ ](fg:red)'
 
 [time]
 format = '[ $time]($style)'
