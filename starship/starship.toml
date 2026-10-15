@@ -1,0 +1,88 @@
+# BitTheCat — Starship prompt
+# https://starship.rs/config/
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Active palette: 'bitthecat_dark' or 'bitthecat_light'
+palette = 'bitthecat_dark'
+
+add_newline = true
+
+# Layout: colored segments separated by "\U0000f460" (>)
+# Each "\U0000f460" (>) takes the color of the segment it introduces. 
+# 
+format = """
+$time[ · ](fg:muted)$username[ \U000F0DBB ](fg:accent2)$directory([\U0000f460 ](fg:green)$git_branch$git_status)
+$character"""
+
+# --- Palettes ---------------------------------------------------------------
+[palettes.bitthecat_dark]
+bg = '#0b1220'
+surface = '#101a2c'
+text = '#e6eef8'
+muted = '#9aa4b2'
+accent = '#bf4013'
+accent2 = '#ffb03d'
+green = '#5fd39a'
+red = '#ff5c5c'
+yellow = '#ffb03d'
+blue = '#6aa6ff'
+purple = '#cb6fe0'
+cyan = '#5fd0d3'
+pink = '#f5789f'
+
+[palettes.bitthecat_light]
+bg = '#eef2f8'
+surface = '#ffffff'
+text = '#0b1220'
+muted = '#5a6473'
+accent = '#d54a12'
+accent2 = '#b37a2a'
+green = '#2d9c47'
+red = '#cc3d3d'
+yellow = '#b37a2a'
+blue = '#3a7bd5'
+purple = '#8b66a3'
+cyan = '#0f8a8f'
+pink = '#d6336c'
+
+# --- Segments ---------------------------------------------------------------
+[username]
+format = '[ $user]($style)'
+style_user = 'fg:accent'
+style_root = 'bold fg:red'
+show_always = true
+
+[directory]
+format = '[ $path]($style)'
+style = 'fg:accent2'
+truncation_length = 3
+truncation_symbol = '…/'
+
+[git_branch]
+format = '[$symbol$branch]($style)'
+style = 'fg:green'
+
+[git_status]
+format = ' [$all_status$ahead_behind]($style)'
+style = 'fg:muted'
+conflicted = '[](fg:red)'
+ahead = '[](fg:cyan)'
+behind = '[](fg:cyan)'
+diverged = '[](fg:cyan)'
+untracked = '[](fg:purple)'
+stashed = '[](fg:purple)'
+modified = '[](fg:accent2)'
+staged = '[](fg:green)'
+renamed = '[](fg:blue)'
+deleted = '[](fg:red)'
+
+[time]
+format = '[ $time]($style)'
+style = 'fg:muted'
+time_format = '%H:%M'
+disabled = false
+
+[character]
+success_symbol = '[❯](bold fg:accent)'
+error_symbol = '[❯](bold fg:red)'
